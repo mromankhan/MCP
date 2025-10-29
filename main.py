@@ -7,6 +7,10 @@ mcp = FastMCP(name="hello-MCP", stateless_http=True)
 def search_online(query: str) -> str:
     return f"Result of searching for {query}..."
 
+@mcp.tool(name="check_weather", description="Check the weather in a given location")
+def search_online(city: str) -> str:
+    return f"weather in {city} is sunny..."
+
 
 mcp_app = mcp.streamable_http_app()
 
