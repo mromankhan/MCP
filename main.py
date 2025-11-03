@@ -11,9 +11,9 @@ def search_online(query: str) -> str:
 def search_online(city: str) -> str:
     return f"weather in {city} is sunny..."
 
-@mcp.tool(name="check_usage", description="Check the weather in a given location")
-def search_online(city: str) -> str:
-    return f"usage in db {city} is sunny..."
+@mcp.tool(name="find_repo", description="Find github repo with given name")
+def find_repo(name: str) -> str:
+    return f"{name} repo found"
 
 
 mcp_app = mcp.streamable_http_app()
