@@ -13,7 +13,11 @@ def search_online(city: str) -> str:
 
 @mcp.tool(name="find_repo", description="Find github repo with given name")
 def find_repo(name: str) -> str:
-    return f"{name} repo found"
+    return f"{name} repo found."
+
+@mcp.tool(name="get_all_repo", description="Get all github repos")
+def find_repo() -> str:
+    return f"All repos."
 
 
 mcp_app = mcp.streamable_http_app()
