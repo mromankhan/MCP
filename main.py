@@ -19,6 +19,10 @@ def find_repo(name: str) -> str:
 def find_repo() -> str:
     return f"All repos."
 
+@mcp.tool(name="delete_repo", description="delete github repo")
+def find_repo(id: str) -> str:
+    return f"{id} Repo deleted sucessfully."
+
 
 mcp_app = mcp.streamable_http_app()
 
