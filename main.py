@@ -1,4 +1,3 @@
-from re import search
 from mcp.server.fastmcp import FastMCP
 
 mcp = FastMCP(name="hello-MCP", stateless_http=True)
