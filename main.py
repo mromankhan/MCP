@@ -8,11 +8,15 @@ def find_repo(name: str) -> str:
     return f"{name} repo found."
 
 @mcp.tool(name="get_all_repo", description="Get all github repos")
-def find_repo() -> str:
+def all_repo() -> str:
     return f"All repos."
 
 @mcp.tool(name="delete_repo", description="delete github repo")
-def find_repo(id: str) -> str:
+def delete_repo(id: str) -> str:
     return f"{id} Repo deleted sucessfully."
+
+@mcp.tool(name="edit_repo", description="edit github repo")
+def edit_repo(id: str) -> str:
+    return f"{id} Repo edit sucessfully."
 
 mcp_app = mcp.streamable_http_app()
